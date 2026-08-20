@@ -1,4 +1,5 @@
 ---
+name: amazon-reorder-planning
 description: Planejamento de reabastecimento FBA via MCP Titanos — ask_selling_partner_report_analyst + get_inventory. Use para reorder point, safety stock, PO draft e coordenação com Ads (ask_ads_report_analyst).
 ---
 

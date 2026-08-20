@@ -1,4 +1,5 @@
 ---
+name: amazon-market-entry
 description: Avaliacao de viabilidade de entrada em mercado Amazon BR — assess_market_entry, get_market_overview, get_price_bands. Veredito GO/CAUTION/AVOID com scoring 7 dimensoes.
 ---
 

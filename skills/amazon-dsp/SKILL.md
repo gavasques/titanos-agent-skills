@@ -1,4 +1,5 @@
 ---
+name: amazon-dsp
 description: Amazon DSP via MCP Titanos — leitura get_dsp_*, write create/update/delete_dsp_resources. Performance histórica via ask_ads_report_analyst ainda não cobre DSP no warehouse; use API live + skill Amazon-Ads para SP.
 ---
 

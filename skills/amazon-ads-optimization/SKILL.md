@@ -1,4 +1,5 @@
 ---
+name: amazon-ads-optimization
 description: Playbook de otimização Amazon Ads para o MCP Titanos. Use com get_optimization_guide e tools Ads (ask_ads_report_analyst, create/update_resources) ao planejar bids, budgets, negativos, sazonalidade ou diagnóstico de performance.
 ---
 

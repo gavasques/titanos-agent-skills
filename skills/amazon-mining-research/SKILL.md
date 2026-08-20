@@ -1,4 +1,5 @@
 ---
+name: amazon-mining-research
 description: Pesquisa de mercado Amazon BR via MCP Titanos — find_categories, search_products, get_market_overview, assess_market_entry, get_price_bands, get_market_pulse. Use para nicho, validação, scoring GO/CAUTION/AVOID e monitoramento.
 ---
 

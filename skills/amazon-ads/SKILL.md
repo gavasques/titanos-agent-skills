@@ -1,4 +1,5 @@
 ---
+name: amazon-ads
 description: Guia para usar o servidor MCP Titanos (@titanos/mcp-agents) em contas Amazon Advertising — relatórios, campanhas SP/SB/SD, recomendações, mutações e PPC memory. Use para performance, bids, search terms, estrutura de campanhas e otimização via MCP.
 ---
 

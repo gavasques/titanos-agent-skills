@@ -1,4 +1,5 @@
 ---
+name: titanos-mcp-setup
 description: Instalação e diagnóstico do MCP Titanos (@titanos/mcp-agents) — API Key, OAuth Amazon, scopes, whoami, get_server_guide. Use antes de qualquer outra skill Titanos ou quando o agente não encontra tools, retorna SCOPE_MISSING ou INVALID_API_KEY.
 ---
 

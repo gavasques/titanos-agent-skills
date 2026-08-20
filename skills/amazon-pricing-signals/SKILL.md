@@ -1,4 +1,5 @@
 ---
+name: amazon-pricing-signals
 description: Sinais de precificacao Amazon BR — get_pricing_signals e get_price_bands. Resposta RAISE/HOLD/LOWER com bandas de oportunidade do nicho.
 ---
 

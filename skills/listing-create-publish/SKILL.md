@@ -1,4 +1,5 @@
 ---
+name: listing-create-publish
 description: Criar e publicar listings na conta Seller via MCP Titanos — product type schema, validate_listing, preview_listing, create_listing, update_listing, changelog. Use após Super Listing Power ou auditoria; sempre dry-run/preview antes de write.
 ---
 

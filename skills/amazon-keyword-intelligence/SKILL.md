@@ -1,4 +1,5 @@
 ---
+name: amazon-keyword-intelligence
 description: Inteligencia de keywords Amazon BR via ABA — expand_keywords, reverse_asin_keywords, get_keyword_serp, thanos_rank_keywords. Expansao, reverse ASIN e proxy SERP.
 ---
 
