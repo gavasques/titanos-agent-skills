@@ -1,7 +1,7 @@
 {
   "name": "titanos",
   "version": "1.0.0",
-  "description": "Skills de vendedor TITANOS: Amazon Ads, listing, mineração, Seller Central, FBA e ERP via MCP @titanos/mcp-agents.",
+  "description": "Official TITANOS seller skills for agents (Cursor, Claude Code) — skills oficiais de vendedor TITANOS para agentes. Amazon Ads, listing, Seller Central, FBA e ERP via MCP @titanos/mcp-agents.",
   "author": {
     "name": "Titanos",
     "url": "https://www.titanos.com.br"
