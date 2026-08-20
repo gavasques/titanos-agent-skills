@@ -1,4 +1,5 @@
 ---
+name: super-listing-power
 description: Gera listing Amazon completo via MCP Titanos — invoke_listing_power, polling get_result. Texto otimizado, imagens e A+ opcionais. Use após mineração ou com URL/manual; antes de publicar use listing-create-publish.
 ---
 

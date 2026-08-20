@@ -1,4 +1,5 @@
 ---
+name: olist-tiny-erp
 description: Olist Tiny ERP via Titanos MCP para Claude, Codex e outros agentes. Use quando precisar conectar, consultar ou operar Olist/Tiny ERP REST v3 com multi-contas, OAuth, billing por chamada, quotas, rate limits, idempotência e webhooks.
 ---
 

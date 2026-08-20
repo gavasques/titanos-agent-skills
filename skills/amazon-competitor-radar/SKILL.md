@@ -1,4 +1,5 @@
 ---
+name: amazon-competitor-radar
 description: Radar de concorrentes Amazon BR — get_market_pulse com alertas RED/YELLOW/GREEN. Monitora preco, BSR e reviews vs snapshot anterior.
 ---
 

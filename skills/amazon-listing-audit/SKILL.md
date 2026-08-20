@@ -1,4 +1,5 @@
 ---
+name: amazon-listing-audit
 description: Auditoria de listings Amazon via MCP Titanos — audit_listings (15 checks), RUFUS, hijacking, compliance, histórico. Use para saúde de catálogo, supressão, buy box e cruzamento com Ads (ask_ads_report_analyst).
 ---
 

@@ -1,4 +1,5 @@
 ---
+name: bling-erp
 description: Bling ERP v3 via Titanos MCP para Claude, Codex e outros agentes. Use quando precisar conectar, consultar ou operar Bling API v3 com multi-contas, OAuth, billing por chamada, quotas, rate limits (3 req/s, 120k/dia), idempotência e webhooks.
 ---
 

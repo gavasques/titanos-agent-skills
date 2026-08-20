@@ -1,4 +1,5 @@
 ---
+name: search-term-harvest-dashboard
 description: Dashboard de harvest de search terms (BROAD/PHRASE) via MCP Titanos — ask_ads_report_analyst (ads_search_terms). Artifact React. Triggers: novas keywords exact, termos convertendo, expandir cobertura PPC.
 ---
 

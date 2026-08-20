@@ -1,4 +1,5 @@
 ---
+name: amazon-seller-central
 description: Guia Seller Central BR via MCP Titanos — estoque FBA, vendas/tráfego, finanças e relatórios SP-API. Use ask_selling_partner_report_analyst, get_inventory, get_seller_central_guide. Vendor Central não é foco v1 Titanos.
 ---
 

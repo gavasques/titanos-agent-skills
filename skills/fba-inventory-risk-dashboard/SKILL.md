@@ -1,4 +1,5 @@
 ---
+name: fba-inventory-risk-dashboard
 description: Dashboard de risco de estoque FBA via MCP Titanos — ask_selling_partner_report_analyst (warehouse FBA) + get_inventory. Artifact React estilo editorial. Triggers: days of supply, stockout, reorder urgency, inventário FBA saudável.
 ---
 
