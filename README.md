@@ -102,3 +102,9 @@ Catálogo máquina / machine catalog: [`catalog.json`](catalog.json).
 | ads | `amazon-ads`, `titanos-ads-quickstart`, `amazon-sp-campaign-launcher`, `amazon-ads-keyword-target-builder`, `amazon-ads-write-recovery`, `amazon-ads-launch-playbook`, `amazon-ads-reports-troubleshooting`, `amazon-ads-optimization`, `wasted-ad-spend-dashboard`, `search-term-harvest-dashboard`, `amazon-dsp` |
 | seller | `amazon-seller-central`, `fba-inventory-risk-dashboard`, `amazon-reorder-planning`, `amazon-listing-audit` |
 | erp | `olist-tiny-erp`, `bling-erp` |
+
+---
+
+## Licença / License
+
+[MIT](LICENSE). Copyright (c) 2026 Titanos.
