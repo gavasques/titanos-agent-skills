@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "titanos": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@titanos/mcp-agents@1"],
+      "env": {
+        "TITANOS_API_URL": "https://www.titanos.com.br",
+        "TITANOS_API_KEY": "${TITANOS_API_KEY}"
+      }
+    }
+  }
+}
