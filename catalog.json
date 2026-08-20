@@ -1,0 +1,161 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "id": "titanos-mcp-setup",
+      "zip": "titanos-mcp-setup.zip",
+      "section": "essenciais",
+      "extras": []
+    },
+    {
+      "id": "amazon-mining-research",
+      "zip": "amazon-mining-research.zip",
+      "section": "essenciais",
+      "extras": []
+    },
+    {
+      "id": "amazon-market-entry",
+      "zip": "amazon-market-entry.zip",
+      "section": "essenciais",
+      "extras": []
+    },
+    {
+      "id": "amazon-pricing-signals",
+      "zip": "amazon-pricing-signals.zip",
+      "section": "essenciais",
+      "extras": []
+    },
+    {
+      "id": "amazon-keyword-intelligence",
+      "zip": "amazon-keyword-intelligence.zip",
+      "section": "essenciais",
+      "extras": []
+    },
+    {
+      "id": "amazon-competitor-radar",
+      "zip": "amazon-competitor-radar.zip",
+      "section": "essenciais",
+      "extras": []
+    },
+    {
+      "id": "super-listing-power",
+      "zip": "super-listing-power.zip",
+      "section": "essenciais",
+      "extras": []
+    },
+    {
+      "id": "listing-create-publish",
+      "zip": "listing-create-publish.zip",
+      "section": "essenciais",
+      "extras": []
+    },
+    {
+      "id": "amazon-ads",
+      "zip": "Amazon-Ads.zip",
+      "section": "ads",
+      "extras": []
+    },
+    {
+      "id": "titanos-ads-quickstart",
+      "zip": "titanos-ads-quickstart.zip",
+      "section": "ads",
+      "extras": []
+    },
+    {
+      "id": "amazon-sp-campaign-launcher",
+      "zip": "amazon-sp-campaign-launcher.zip",
+      "section": "ads",
+      "extras": []
+    },
+    {
+      "id": "amazon-ads-keyword-target-builder",
+      "zip": "amazon-ads-keyword-target-builder.zip",
+      "section": "ads",
+      "extras": []
+    },
+    {
+      "id": "amazon-ads-write-recovery",
+      "zip": "amazon-ads-write-recovery.zip",
+      "section": "ads",
+      "extras": []
+    },
+    {
+      "id": "amazon-ads-launch-playbook",
+      "zip": "amazon-ads-launch-playbook.zip",
+      "section": "ads",
+      "extras": []
+    },
+    {
+      "id": "amazon-ads-reports-troubleshooting",
+      "zip": "amazon-ads-reports-troubleshooting.zip",
+      "section": "ads",
+      "extras": []
+    },
+    {
+      "id": "amazon-ads-optimization",
+      "zip": "amazon-ads-optimization.zip",
+      "section": "ads",
+      "extras": []
+    },
+    {
+      "id": "wasted-ad-spend-dashboard",
+      "zip": "wasted-ad-spend-dashboard.zip",
+      "section": "ads",
+      "extras": [
+        "assets"
+      ]
+    },
+    {
+      "id": "search-term-harvest-dashboard",
+      "zip": "search-term-harvest-dashboard.zip",
+      "section": "ads",
+      "extras": [
+        "assets"
+      ]
+    },
+    {
+      "id": "amazon-dsp",
+      "zip": "amazon-dsp.zip",
+      "section": "ads",
+      "extras": []
+    },
+    {
+      "id": "amazon-seller-central",
+      "zip": "amazon-seller-central.zip",
+      "section": "seller",
+      "extras": []
+    },
+    {
+      "id": "fba-inventory-risk-dashboard",
+      "zip": "fba-inventory-risk-dashboard.zip",
+      "section": "seller",
+      "extras": []
+    },
+    {
+      "id": "amazon-reorder-planning",
+      "zip": "amazon-reorder-planning.zip",
+      "section": "seller",
+      "extras": [
+        "references"
+      ]
+    },
+    {
+      "id": "amazon-listing-audit",
+      "zip": "amazon-listing-audit.zip",
+      "section": "seller",
+      "extras": []
+    },
+    {
+      "id": "olist-tiny-erp",
+      "zip": "olist-tiny-erp.zip",
+      "section": "erp",
+      "extras": []
+    },
+    {
+      "id": "bling-erp",
+      "zip": "bling-erp.zip",
+      "section": "erp",
+      "extras": []
+    }
+  ]
+}

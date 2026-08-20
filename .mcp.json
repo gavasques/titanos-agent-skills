@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "titanos": {
+      "command": "npx",
+      "args": ["-y", "@titanos/mcp-agents@1"],
+      "env": {
+        "TITANOS_API_URL": "https://www.titanos.com.br"
+      }
+    }
+  }
+}
