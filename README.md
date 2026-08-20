@@ -62,6 +62,16 @@ There are no API keys, seller credentials, Ads IDs, or live account data. Create
 
 ## Como usar / How to use
 
+**Manifests** — o mesmo `skills/` entra em cada cliente por um manifesto diferente. / The same `skills/` tree is loaded through a different manifest per client.
+
+| Cliente / Client | Manifest |
+| --- | --- |
+| Claude Code / VS Code Copilot | `.claude-plugin/plugin.json` |
+| Cursor | `.cursor-plugin/plugin.json` or root `plugin.json` |
+| Codex / ChatGPT | `.codex-plugin/plugin.json` |
+
+Cursor: marketplace or plugin directory. Codex: [plugin install docs](https://developers.openai.com/codex/plugins/build). Claude: `claude --plugin-dir ./titanos-agent-skills`.
+
 **URL bruta / raw GitHub** — o agente lê o `SKILL.md` pelo raw, por exemplo:
 
 `https://raw.githubusercontent.com/gavasques/titanos-agent-skills/main/skills/amazon-ads/SKILL.md`

@@ -1,0 +1,28 @@
+{
+  "name": "titanos",
+  "version": "1.0.0",
+  "description": "Official TITANOS seller skills for agents (Cursor, Claude Code) — skills oficiais de vendedor TITANOS para agentes. Amazon Ads, listing, Seller Central, FBA e ERP via MCP @titanos/mcp-agents.",
+  "author": {
+    "name": "Titanos",
+    "url": "https://www.titanos.com.br"
+  },
+  "homepage": "https://www.titanos.com.br/conta/integracoes",
+  "repository": "https://github.com/gavasques/titanos-agent-skills",
+  "license": "MIT",
+  "keywords": [
+    "titanos",
+    "amazon",
+    "advertising",
+    "ppc",
+    "seller-central",
+    "listing",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "TITANOS",
+    "developerName": "Titanos",
+    "websiteURL": "https://www.titanos.com.br"
+  }
+}
