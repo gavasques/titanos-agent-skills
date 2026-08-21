@@ -1,6 +1,6 @@
 ---
 name: wasted-ad-spend-dashboard
-description: Dashboard de desperdício em Sponsored Products via MCP Titanos — list_brands + ask_ads_report_analyst (dataset ads_search_terms) ou get_search_term_report. Renderiza artifact React. Triggers: wasted spend, search terms sem conversão, negativos candidatos.
+description: "Dashboard de desperdício em Sponsored Products via MCP Titanos — list_brands + ask_ads_report_analyst (dataset ads_search_terms) ou get_search_term_report. Renderiza artifact React. Triggers: wasted spend, search terms sem conversão, negativos candidatos."
 license: MIT
 ---
 
