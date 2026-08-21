@@ -1,9 +1,17 @@
 ---
 name: fba-inventory-risk-dashboard
 description: Dashboard de risco de estoque FBA via MCP Titanos — ask_selling_partner_report_analyst (warehouse FBA) + get_inventory. Artifact React estilo editorial. Triggers: days of supply, stockout, reorder urgency, inventário FBA saudável.
+license: MIT
 ---
 
 # FBA Inventory Risk Dashboard — MCP Titanos
+
+## Quando usar / When to Use This Skill
+
+Use esta skill quando o usuário / Use this skill when the user:
+- Pergunta se o estoque FBA está saudável
+- Quer days of supply, risco de ruptura ou urgência de reorder
+- Precisa de um dashboard interativo de risco FBA (não PO draft)
 
 Visão interativa de **risco de ruptura** FBA (Seller Central BR). Para **decisão de compra/PO**, use skill `amazon-reorder-planning`.
 

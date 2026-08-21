@@ -1,9 +1,17 @@
 ---
 name: amazon-market-entry
-description: Avaliacao de viabilidade de entrada em mercado Amazon BR — assess_market_entry, get_market_overview, get_price_bands. Veredito GO/CAUTION/AVOID com scoring 7 dimensoes.
+description: Avaliacao de viabilidade de entrada em mercado Amazon BR — assess_market_entry, get_market_overview, get_price_bands. Veredito GO/CAUTION/AVOID com scoring 7 dimensoes. Use para decidir se vale entrar num nicho (GO/CAUTION/AVOID).
+license: MIT
 ---
 
 # Amazon Market Entry — MCP Titanos
+
+## Quando usar / When to Use This Skill
+
+Use esta skill quando o usuário / Use this skill when the user:
+- Pergunta "vale a pena entrar neste nicho?" ou "devo vender X na Amazon?"
+- Quer um veredito GO/CAUTION/AVOID
+- Precisa de scoring de viabilidade em 7 dimensões
 
 Skill para responder: *"vale a pena entrar neste nicho?"*, *"devo vender X na Amazon?"*.
 

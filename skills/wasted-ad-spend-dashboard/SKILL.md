@@ -1,9 +1,17 @@
 ---
 name: wasted-ad-spend-dashboard
 description: Dashboard de desperdício em Sponsored Products via MCP Titanos — list_brands + ask_ads_report_analyst (dataset ads_search_terms) ou get_search_term_report. Renderiza artifact React. Triggers: wasted spend, search terms sem conversão, negativos candidatos.
+license: MIT
 ---
 
 # Wasted Ad Spend Dashboard
+
+## When to Use This Skill
+
+Use this skill when the user:
+- Asks where Sponsored Products spend is being wasted
+- Wants search terms that spend without converting
+- Needs negative-keyword candidates from wasted terms
 
 This skill takes the user from "where am I wasting money?" to a live, interactive dashboard showing every search term burning budget without producing sales, with sortable columns, magnitude bars, and cost tiers.
 

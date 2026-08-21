@@ -1,6 +1,7 @@
 ---
 name: amazon-sp-campaign-launcher
 description: Use when an AI agent needs to create Sponsored Products campaigns through Titanos MCP, especially new product launches, AUTO/KW/PAT structures, ASIN/SKU validation, dry-run/write execution, and safe partial recovery.
+license: MIT
 ---
 
 # Amazon SP Campaign Launcher — Titanos MCP

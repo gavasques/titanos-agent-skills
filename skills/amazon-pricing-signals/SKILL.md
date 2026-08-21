@@ -1,9 +1,17 @@
 ---
 name: amazon-pricing-signals
-description: Sinais de precificacao Amazon BR — get_pricing_signals e get_price_bands. Resposta RAISE/HOLD/LOWER com bandas de oportunidade do nicho.
+description: Sinais de precificacao Amazon BR — get_pricing_signals e get_price_bands. Resposta RAISE/HOLD/LOWER com bandas de oportunidade do nicho. Use para decidir RAISE/HOLD/LOWER ou a faixa de preço de um nicho.
+license: MIT
 ---
 
 # Amazon Pricing Signals — MCP Titanos
+
+## Quando usar / When to Use This Skill
+
+Use esta skill quando o usuário / Use this skill when the user:
+- Pergunta "devo subir ou baixar o preço?"
+- Quer a faixa de preço / bandas de oportunidade de um nicho
+- Precisa de sinais RAISE/HOLD/LOWER antes de mudar preço
 
 Skill para: *"devo subir ou baixar o preço?"*, *"qual faixa de preço entrar?"*.
 

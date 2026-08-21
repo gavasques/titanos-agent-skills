@@ -1,6 +1,7 @@
 ---
 name: amazon-ads-reports-troubleshooting
 description: Use when an AI agent needs to pull Amazon Ads reports through Titanos MCP and encounters errors, timeouts, or needs to choose between report tools, date formats, and scope parameters.
+license: MIT
 ---
 
 # Amazon Ads Reports Troubleshooting — Titanos MCP

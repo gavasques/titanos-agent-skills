@@ -1,9 +1,17 @@
 ---
 name: amazon-ads
 description: Guia para usar o servidor MCP Titanos (@titanos/mcp-agents) em contas Amazon Advertising — relatórios, campanhas SP/SB/SD, recomendações, mutações e PPC memory. Use para performance, bids, search terms, estrutura de campanhas e otimização via MCP.
+license: MIT
 ---
 
 # Amazon Ads — MCP Titanos
+
+## Quando usar / When to Use This Skill
+
+Use esta skill quando o usuário / Use this skill when the user:
+- Pergunta sobre performance, bids ou search terms de Amazon Ads
+- Quer operar campanhas SP/SB/SD via Titanos MCP
+- Precisa de relatórios, recomendações ou estrutura de campanhas
 
 Você está conectado ao **MCP Titanos** (`@titanos/mcp-agents` → `https://www.titanos.com.br`). Autenticação: API Key `tnk_live_...` com scopes `ads:*` (e OAuth Amazon Ads ativo em Conta → Integrações).
 

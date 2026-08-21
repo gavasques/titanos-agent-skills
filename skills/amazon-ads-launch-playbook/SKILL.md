@@ -1,9 +1,17 @@
 ---
 name: amazon-ads-launch-playbook
 description: Use when an AI agent needs a ready-to-run Amazon Ads launch workflow for a new product using Titanos MCP, including account discovery, listing checks, campaign architecture, budget split, launch QA, and first-7-days monitoring.
+license: MIT
 ---
 
 # Amazon Ads Launch Playbook — Titanos MCP
+
+## Quando usar / When to Use This Skill
+
+Use esta skill quando o usuário / Use this skill when the user:
+- Quer um roteiro completo para lançar Ads de um produto novo
+- Pede arquitetura de campanhas, split de budget e QA de launch
+- Precisa de monitoramento dos primeiros 7 dias após o lançamento
 
 ## Objetivo
 

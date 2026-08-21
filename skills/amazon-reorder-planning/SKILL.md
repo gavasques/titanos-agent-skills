@@ -1,9 +1,17 @@
 ---
 name: amazon-reorder-planning
 description: Planejamento de reabastecimento FBA via MCP Titanos — ask_selling_partner_report_analyst + get_inventory. Use para reorder point, safety stock, PO draft e coordenação com Ads (ask_ads_report_analyst).
+license: MIT
 ---
 
 # Amazon Reorder Planning — MCP Titanos
+
+## When to Use This Skill
+
+Use this skill when the user:
+- Asks when to reorder FBA inventory
+- Wants reorder point, safety stock, or a PO draft
+- Needs to coordinate restock with Ads performance
 
 Decisões de recompra a partir de warehouse SP + inventário ao vivo. **Seller Central FBA** (BR). Vendor: ver nota no skill `amazon-seller-central`.
 

@@ -1,9 +1,17 @@
 ---
 name: amazon-ads-optimization
 description: Playbook de otimização Amazon Ads para o MCP Titanos. Use com get_optimization_guide e tools Ads (ask_ads_report_analyst, create/update_resources) ao planejar bids, budgets, negativos, sazonalidade ou diagnóstico de performance.
+license: MIT
 ---
 
 # Amazon Ads Optimization Guide (Titanos MCP)
+
+## When to Use This Skill
+
+Use this skill when the user:
+- Wants to optimize Amazon Ads bids, budgets, or negatives
+- Asks how to diagnose Ads performance or seasonality
+- Planning a weekly optimization pass via Titanos MCP
 
 Playbook estratégico para campanhas Amazon Ads. **Dados e mutações** vêm do MCP Titanos (`@titanos/mcp-agents`). Para o mapa de tools: `get_optimization_guide({ topic: "full" })` e skill `Amazon-Ads`.
 
