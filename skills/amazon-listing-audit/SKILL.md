@@ -1,9 +1,17 @@
 ---
 name: amazon-listing-audit
 description: Auditoria de listings Amazon via MCP Titanos — audit_listings (15 checks), RUFUS, hijacking, compliance, histórico. Use para saúde de catálogo, supressão, buy box e cruzamento com Ads (ask_ads_report_analyst).
+license: MIT
 ---
 
 # Amazon Listing Audit — MCP Titanos
+
+## When to Use This Skill
+
+Use this skill when the user:
+- Wants a catalog-health or listing audit (suppression, buy box, hijacking, RUFUS)
+- Asks whether listings are compliant or need triage
+- Needs to cross-check catalog issues with Ads performance
 
 Auditoria de catálogo Seller Central via MCP Titanos (`connection_id` da conexão SP-API). Cruzamento com Ads: skill `Amazon-Ads` + `ask_ads_report_analyst`.
 

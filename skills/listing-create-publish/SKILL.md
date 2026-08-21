@@ -1,9 +1,17 @@
 ---
 name: listing-create-publish
 description: Criar e publicar listings na conta Seller via MCP Titanos — product type schema, validate_listing, preview_listing, create_listing, update_listing, changelog. Use após Super Listing Power ou auditoria; sempre dry-run/preview antes de write.
+license: MIT
 ---
 
 # Criar e publicar listing — MCP Titanos
+
+## Quando usar / When to Use This Skill
+
+Use esta skill quando o usuário / Use this skill when the user:
+- Quer criar ou publicar um listing na conta Seller
+- Pede validate/preview (dry-run) antes de write
+- Vai aplicar output do Super Listing Power ou de uma auditoria no catálogo
 
 Fluxo **write** Seller Central (SP-API) pela conta conectada do usuário. Complementa `amazon-listing-audit` (diagnóstico) e `super-listing-power` (geração IA).
 

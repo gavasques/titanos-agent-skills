@@ -1,9 +1,17 @@
 ---
 name: amazon-dsp
-description: Amazon DSP via MCP Titanos — leitura get_dsp_*, write create/update/delete_dsp_resources. Performance histórica via ask_ads_report_analyst ainda não cobre DSP no warehouse; use API live + skill Amazon-Ads para SP.
+description: Amazon DSP via MCP Titanos — leitura get_dsp_*, write create/update/delete_dsp_resources. Performance histórica via ask_ads_report_analyst ainda não cobre DSP no warehouse; use API live + skill Amazon-Ads para SP. Use para ler ou escrever recursos DSP (não Sponsored Products).
+license: MIT
 ---
 
 # Amazon DSP — MCP Titanos
+
+## Quando usar / When to Use This Skill
+
+Use esta skill quando o usuário / Use this skill when the user:
+- Pede para ler ou escrever campanhas Amazon DSP
+- Precisa de advertisers, orders ou line items DSP via MCP
+- Menciona DSP (programmatic); Sponsored Products usa amazon-ads
 
 DSP (programmatic) no Titanos: leitura/escrita via Advertising API em perfis **agency** (`account_type` agency no perfil Ads).
 

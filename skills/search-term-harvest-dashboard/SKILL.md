@@ -1,9 +1,17 @@
 ---
 name: search-term-harvest-dashboard
 description: Dashboard de harvest de search terms (BROAD/PHRASE) via MCP Titanos — ask_ads_report_analyst (ads_search_terms). Artifact React. Triggers: novas keywords exact, termos convertendo, expandir cobertura PPC.
+license: MIT
 ---
 
 # Search Term Harvest Dashboard
+
+## When to Use This Skill
+
+Use this skill when the user:
+- Asks which search terms to promote to exact-match keywords
+- Wants converting terms from BROAD/PHRASE campaigns
+- Needs to expand PPC coverage from search-term reports
 
 This skill takes the user from "what should I target?" to a live, interactive dashboard showing every high-CTR customer search term currently triggered by their broad and phrase keywords — the strongest candidates to promote to new exact-match targeting.
 

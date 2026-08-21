@@ -1,9 +1,17 @@
 ---
 name: titanos-ads-quickstart
 description: Use when an AI agent needs to start using Titanos MCP for Amazon Ads quickly, identify the right account/profile, inspect available Ads tools, validate scopes, and avoid common setup/discovery mistakes.
+license: MIT
 ---
 
 # Titanos Ads Quickstart
+
+## Quando usar / When to Use This Skill
+
+Use esta skill quando o usuário / Use this skill when the user:
+- Quer começar Amazon Ads via Titanos MCP sem descobrir endpoints na tentativa e erro
+- Precisa identificar a conta/perfil Ads certo e validar scopes
+- Pergunta quais tools Ads existem ou como evitar erros comuns de setup
 
 ## Objetivo
 

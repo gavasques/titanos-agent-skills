@@ -1,9 +1,17 @@
 ---
 name: amazon-ads-write-recovery
 description: Use when an AI agent is applying Amazon Ads mutations through Titanos MCP and must use dry-run, idempotency, readback, partial-write recovery, duplicate prevention, or backend error troubleshooting.
+license: MIT
 ---
 
 # Amazon Ads Write Recovery — Titanos MCP
+
+## Quando usar / When to Use This Skill
+
+Use esta skill quando o usuário / Use this skill when the user:
+- Is applying Ads mutations and a write failed mid-way
+- Needs dry-run, idempotency, or readback before/after writes
+- Wants to avoid duplicate campaigns or recover a partial write
 
 ## Objetivo
 

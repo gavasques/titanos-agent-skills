@@ -1,9 +1,17 @@
 ---
 name: amazon-keyword-intelligence
-description: Inteligencia de keywords Amazon BR via ABA — expand_keywords, reverse_asin_keywords, get_keyword_serp, thanos_rank_keywords. Expansao, reverse ASIN e proxy SERP.
+description: Inteligencia de keywords Amazon BR via ABA — expand_keywords, reverse_asin_keywords, get_keyword_serp, thanos_rank_keywords. Expansao, reverse ASIN e proxy SERP. Use para expandir keywords, reverse ASIN ou ver SERP/ABA.
+license: MIT
 ---
 
 # Amazon Keyword Intelligence — MCP Titanos
+
+## Quando usar / When to Use This Skill
+
+Use esta skill quando o usuário / Use this skill when the user:
+- Quer expansão de keywords ou reverse ASIN (ABA)
+- Pergunta o que ranqueia na busca Amazon BR (SERP proxy)
+- Precisa de inteligência de keywords antes de listing ou ads
 
 Skill para pesquisa de keywords: expansão, reverse ASIN, rank ABA e composição de SERP.
 

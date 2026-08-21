@@ -1,9 +1,17 @@
 ---
 name: amazon-ads-keyword-target-builder
 description: Use when an AI agent needs to choose Amazon Ads keywords, product targets, match types, bids, and negative seeds for Sponsored Products campaigns using Titanos MCP data and safe launch logic.
+license: MIT
 ---
 
 # Amazon Ads Keyword & Target Builder — Titanos MCP
+
+## Quando usar / When to Use This Skill
+
+Use esta skill quando o usuário / Use this skill when the user:
+- Precisa escolher keywords, product targets, match types ou bids para SP
+- Pede negativos iniciais antes de lançar campanhas
+- Quer listas de targeting a partir de dados Titanos (sem chute)
 
 ## Objetivo
 

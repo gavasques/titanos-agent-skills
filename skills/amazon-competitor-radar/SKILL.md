@@ -1,9 +1,17 @@
 ---
 name: amazon-competitor-radar
-description: Radar de concorrentes Amazon BR — get_market_pulse com alertas RED/YELLOW/GREEN. Monitora preco, BSR e reviews vs snapshot anterior.
+description: Radar de concorrentes Amazon BR — get_market_pulse com alertas RED/YELLOW/GREEN. Monitora preco, BSR e reviews vs snapshot anterior. Use para monitorar preço, BSR e reviews vs o snapshot anterior.
+license: MIT
 ---
 
 # Amazon Competitor Radar — MCP Titanos
+
+## Quando usar / When to Use This Skill
+
+Use esta skill quando o usuário / Use this skill when the user:
+- Pergunta o que mudou no nicho (preço, BSR, reviews)
+- Quer alertas de concorrentes RED/YELLOW/GREEN
+- Precisa de market pulse vs um snapshot anterior
 
 Skill para monitoramento operacional: *"o que mudou no meu nicho?"*, *"concorrente baixou preço?"*.
 

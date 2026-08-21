@@ -1,9 +1,17 @@
 ---
 name: olist-tiny-erp
 description: Olist Tiny ERP via Titanos MCP para Claude, Codex e outros agentes. Use quando precisar conectar, consultar ou operar Olist/Tiny ERP REST v3 com multi-contas, OAuth, billing por chamada, quotas, rate limits, idempotência e webhooks.
+license: MIT
 ---
 
 # Olist Tiny ERP — MCP Titanos
+
+## Quando usar / When to Use This Skill
+
+Use esta skill quando o usuário / Use this skill when the user:
+- Pede para conectar, consultar ou operar Olist/Tiny ERP pelo Titanos
+- Precisa de multi-contas, OAuth, quotas ou webhooks Tiny REST v3
+- Menciona Olist Tiny via MCP (não tokens OAuth no .env local)
 
 Use esta skill quando o usuário pedir para acessar Olist Tiny ERP pelo Titanos MCP. O Titanos deve ser o broker: o agente usa `TITANOS_API_KEY`; tokens OAuth da Olist ficam criptografados no Titanos, nunca no `.env` local.
 

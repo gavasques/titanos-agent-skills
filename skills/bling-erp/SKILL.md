@@ -1,9 +1,17 @@
 ---
 name: bling-erp
 description: Bling ERP v3 via Titanos MCP para Claude, Codex e outros agentes. Use quando precisar conectar, consultar ou operar Bling API v3 com multi-contas, OAuth, billing por chamada, quotas, rate limits (3 req/s, 120k/dia), idempotência e webhooks.
+license: MIT
 ---
 
 # Bling ERP — MCP Titanos
+
+## Quando usar / When to Use This Skill
+
+Use esta skill quando o usuário / Use this skill when the user:
+- Pede para conectar, consultar ou operar Bling ERP pelo Titanos
+- Precisa da API Bling v3 (OAuth, quotas, webhooks, rate limits)
+- Menciona Bling via MCP (não tokens OAuth no .env local)
 
 Use esta skill quando o usuário pedir para acessar Bling ERP pelo Titanos MCP. O Titanos é o broker: o agente usa `TITANOS_API_KEY`; tokens OAuth do Bling ficam criptografados no Titanos, nunca no `.env` local.
 

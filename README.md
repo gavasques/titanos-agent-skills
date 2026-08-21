@@ -62,6 +62,28 @@ There are no API keys, seller credentials, Ads IDs, or live account data. Create
 
 ## Como usar / How to use
 
+### skills.sh
+
+**PT — Instalar o pack** / **EN — Install the pack:**
+
+```bash
+npx skills add gavasques/titanos-agent-skills
+```
+
+**PT — Instalar uma skill** / **EN — Install one skill** (mesmo formato da página find-skills / same shape as the find-skills page):
+
+```bash
+npx skills add https://github.com/gavasques/titanos-agent-skills --skill amazon-ads
+```
+
+**PT — Páginas canônicas** / **EN — Canonical pages** (aparecem após o primeiro install / appear after the first install):
+
+- https://www.skills.sh/gavasques/titanos-agent-skills
+- https://www.skills.sh/gavasques/titanos-agent-skills/amazon-ads
+- Padrão / pattern: `https://www.skills.sh/gavasques/titanos-agent-skills/<skill-name>`
+
+O listing no skills.sh é criado por telemetria do CLI (`npx skills add`), não por um formulário de submissão. / The skills.sh listing is created by CLI telemetry (`npx skills add`), not a submit form.
+
 **Manifests** — o mesmo `skills/` entra em cada cliente por um manifesto diferente. / The same `skills/` tree is loaded through a different manifest per client.
 
 | Cliente / Client | Manifest |

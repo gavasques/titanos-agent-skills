@@ -1,9 +1,17 @@
 ---
 name: titanos-mcp-setup
 description: Instalação e diagnóstico do MCP Titanos (@titanos/mcp-agents) — API Key, OAuth Amazon, scopes, whoami, get_server_guide. Use antes de qualquer outra skill Titanos ou quando o agente não encontra tools, retorna SCOPE_MISSING ou INVALID_API_KEY.
+license: MIT
 ---
 
 # Titanos MCP — Guia de instalação e setup
+
+## Quando usar / When to Use This Skill
+
+Use esta skill quando o usuário / Use this skill when the user:
+- Precisa instalar ou diagnosticar o MCP Titanos (API key, OAuth, scopes)
+- O agente não encontra tools ou retorna SCOPE_MISSING / INVALID_API_KEY
+- Vai usar qualquer outra skill Titanos pela primeira vez
 
 Skill base para conectar **Claude Desktop**, **Claude Code**, **Cursor**, **Codex** ou **Hermes** ao MCP Titanos. Todas as outras skills desta pasta assumem que este setup está concluído.
 
