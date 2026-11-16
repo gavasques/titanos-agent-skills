@@ -6,7 +6,7 @@
     "name": "Titanos",
     "url": "https://www.titanos.com.br"
   },
-  "homepage": "https://www.titanos.com.br/conta/integracoes",
+  "homepage": "https://www.titanos.com.br/docs/mcp",
   "repository": "https://github.com/gavasques/titanos-agent-skills",
   "license": "MIT",
   "keywords": [
@@ -19,16 +19,5 @@
     "mcp"
   ],
   "skills": "./skills",
-  "mcpServers": "./mcp.json",
-  "variables": {
-    "type": "object",
-    "properties": {
-      "TITANOS_API_KEY": {
-        "type": "string",
-        "title": "TITANOS API key",
-        "description": "From TITANOS Conta → Configurações / MCP. Never commit this value."
-      }
-    },
-    "required": ["TITANOS_API_KEY"]
-  }
+  "mcpServers": "./mcp.json"
 }

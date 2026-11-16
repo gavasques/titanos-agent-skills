@@ -13,7 +13,7 @@ Use esta skill quando o usuário / Use this skill when the user:
 - Precisa de multi-contas, OAuth, quotas ou webhooks Tiny REST v3
 - Menciona Olist Tiny via MCP (não tokens OAuth no .env local)
 
-Use esta skill quando o usuário pedir para acessar Olist Tiny ERP pelo Titanos MCP. O Titanos deve ser o broker: o agente usa `TITANOS_API_KEY`; tokens OAuth da Olist ficam criptografados no Titanos, nunca no `.env` local.
+Use esta skill quando o usuário pedir para acessar Olist Tiny ERP pelo Titanos MCP. O Titanos deve ser o broker: o agente se autentica no Titanos por OAuth 2.1 (login no navegador, sem chave); tokens OAuth da Olist ficam criptografados no Titanos, nunca no `.env` local.
 
 ## Comece sempre
 
@@ -31,7 +31,7 @@ O usuário conecta a conta no painel Titanos, não no cliente MCP:
 2. Configurar redirect URI do Titanos exatamente como `https://titanos.com.br/TinyCallback`.
 3. Autorizar OAuth no Titanos.
 4. Criar API Key MCP com scopes Olist.
-5. Configurar Claude/Codex com `@titanos/mcp-agents@1` e `TITANOS_API_KEY`.
+5. Conectar Claude/Codex ao MCP (veja `titanos-mcp-setup`) e aprovar os scopes do ERP no consentimento.
 
 OAuth oficial: access token expira em 4 horas e refresh token em 1 dia. Se a conexão estiver expirada, peça reautorização no Titanos.
 

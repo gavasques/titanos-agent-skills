@@ -217,7 +217,7 @@ Use janela terminando em D-2 ou D-3 porque Amazon Ads pode ter lag de 1–3 dias
 
 | Sintoma | Causa provável | Ação |
 |---|---|---|
-| `SCOPE_MISSING` | API key sem scope | pedir nova key/scopes |
+| `SCOPE_MISSING` | Scope não aprovado no consentimento | reconectar e aprovar os scopes necessários |
 | `Invalid enum value` | pacote MCP antigo/cache npx | usar `@titanos/mcp-agents@1` e limpar cache |
 | `VALIDATION_ERROR` no update | payload sem wrapper `changes` | usar `{ keyword_id, changes: { bid } }` não `{ keyword_id, bid }` |
 | `VALIDATION_ERROR` no create | payload não bate com schema Amazon | rodar dry-run e revisar campos |

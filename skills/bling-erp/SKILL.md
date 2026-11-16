@@ -13,7 +13,7 @@ Use esta skill quando o usuário / Use this skill when the user:
 - Precisa da API Bling v3 (OAuth, quotas, webhooks, rate limits)
 - Menciona Bling via MCP (não tokens OAuth no .env local)
 
-Use esta skill quando o usuário pedir para acessar Bling ERP pelo Titanos MCP. O Titanos é o broker: o agente usa `TITANOS_API_KEY`; tokens OAuth do Bling ficam criptografados no Titanos, nunca no `.env` local.
+Use esta skill quando o usuário pedir para acessar Bling ERP pelo Titanos MCP. O Titanos é o broker: o agente se autentica no Titanos por OAuth 2.1 (login no navegador, sem chave); tokens OAuth do Bling ficam criptografados no Titanos, nunca no `.env` local.
 
 ## Comece sempre
 
@@ -31,7 +31,7 @@ O usuário conecta a conta no painel Titanos, não no cliente MCP:
 2. Configurar redirect URI do Titanos exatamente como `https://titanos.com.br/BlingCallback`.
 3. Autorizar OAuth no Titanos (`/conta/integracoes?tab=bling`).
 4. Criar API Key MCP com scopes Bling (preset `bling-erp` ou leitura).
-5. Configurar Claude/Codex com `@titanos/mcp-agents@1` e `TITANOS_API_KEY`.
+5. Conectar Claude/Codex ao MCP (veja `titanos-mcp-setup`) e aprovar os scopes do ERP no consentimento.
 
 OAuth Bling: authorization code expira em **1 minuto** (exchange imediato no callback). Access token expira em **6 horas**; refresh token em **30 dias**. Se a conexão estiver expirada, peça reautorização no Titanos.
 

@@ -1,6 +1,6 @@
 ---
 name: titanos-mcp-setup
-description: Instalação e diagnóstico do MCP Titanos (@titanos/mcp-agents) — API Key, OAuth Amazon, scopes, whoami, get_server_guide. Use antes de qualquer outra skill Titanos ou quando o agente não encontra tools, retorna SCOPE_MISSING ou INVALID_API_KEY.
+description: Instalação e diagnóstico do MCP Titanos (OAuth 2.1) — conexão HTTP ou @titanos/mcp-agents, scopes, whoami, get_server_guide. Use antes de qualquer outra skill Titanos ou quando o agente não encontra tools, retorna SCOPE_MISSING ou erro de autorização (401).
 license: MIT
 ---
 
@@ -9,8 +9,8 @@ license: MIT
 ## Quando usar / When to Use This Skill
 
 Use esta skill quando o usuário / Use this skill when the user:
-- Precisa instalar ou diagnosticar o MCP Titanos (API key, OAuth, scopes)
-- O agente não encontra tools ou retorna SCOPE_MISSING / INVALID_API_KEY
+- Precisa instalar ou diagnosticar o MCP Titanos (login OAuth, scopes)
+- O agente não encontra tools ou retorna SCOPE_MISSING / 401
 - Vai usar qualquer outra skill Titanos pela primeira vez
 
 Skill base para conectar **Claude Desktop**, **Claude Code**, **Cursor**, **Codex** ou **Hermes** ao MCP Titanos. Todas as outras skills desta pasta assumem que este setup está concluído.
@@ -19,35 +19,36 @@ Skill base para conectar **Claude Desktop**, **Claude Code**, **Cursor**, **Code
 
 | Peça | Detalhe |
 |------|---------|
-| Pacote | `@titanos/mcp-agents` (npm, stdio MCP) |
-| API | `https://www.titanos.com.br/api/mcp/*` |
-| Auth | `Authorization: Bearer tnk_live_...` (API Key) |
+| Servidor | `https://www.titanos.com.br/api/mcp` (Streamable HTTP, sem sessão) |
+| Auth | **OAuth 2.1** com PKCE: login no navegador, **nenhuma chave para copiar** |
+| Alternativa stdio | `@titanos/mcp-agents@1` (versão **1.44.0 ou superior**, que fala OAuth) |
 | Conta Amazon | OAuth no painel web (tokens no vault Titanos — **nunca** no `.env` do MCP) |
 
-Plano mínimo para API Keys: **Grow+** (`feature.mcp.api_keys`).
+Plano mínimo: **Grow+**. Guia público completo: <https://www.titanos.com.br/docs/mcp> (Markdown: <https://www.titanos.com.br/docs/mcp.md>). Central de Ajuda pública: <https://www.titanos.com.br/ajuda>.
+
+> Chaves `tnk_*` (API keys antigas) estão **desativadas por padrão**. Não peça nem aceite chave colada em config: use o login OAuth abaixo.
 
 ## Passo 1 — Conta Titanos
 
-1. Acesse [https://www.titanos.com.br](https://www.titanos.com.br) e faça login.
+1. Acesse [https://www.titanos.com.br](https://www.titanos.com.br) e faça login (plano Grow ou superior).
 2. **Conta → Integrações**
    - Conecte **Seller Central** (SP-API) se for operar listings/estoque/relatórios seller.
    - Conecte **Amazon Ads** se for operar campanhas/relatórios PPC.
    - Status deve ficar **ativo** antes de tools seller/ads retornarem dados.
-3. **Conta → Integrar com IA**
-   - Crie uma key com nome descritivo (ex.: `Hermes Produção`).
-   - Copie o token **completo** (`tnk_live_…`, ~64 caracteres). Só aparece uma vez.
+3. **Conta → Integrar com IA** mostra as conexões autorizadas e permite revogar.
 
-## Passo 2 — Scopes da API Key
+## Passo 2 — Scopes (tela de consentimento)
 
-Escolha um preset ou marque manualmente conforme as skills que o usuário vai instalar:
+Na primeira conexão, o navegador abre: escolha a organização, **revise as permissões (scopes)** e aprove. Aprove só o necessário para as skills que o usuário vai usar. Os modos ajudam a limitar o cliente:
 
-| Preset (UI) | Quando usar |
-|-------------|-------------|
-| **Recomendado** | Uso geral (seller + ads + agentes + mineração) |
-| **Somente leitura** | Auditoria sem mutação |
-| **Seller completo** | Listings, estoque, pedidos, relatórios SP |
-| **Amazon Ads completo** | Campanhas + relatórios + write SP/SB/SD |
-| **Experimentos MCP** | Testes A/B (skill futura) |
+| Modo (`TITANOS_MCP_PROFILE`) | Quando usar |
+|------------------------------|-------------|
+| `titanos-core` | Uso geral |
+| `amazon-seller` | Listings, estoque, pedidos, relatórios SP |
+| `amazon-ads` | Campanhas + relatórios PPC |
+| `amazon-content` | Conteúdo e listing |
+| `titanos-miner` | Pesquisa e mineração |
+| `mercado-livre`, `olist`, `bling`, `shopee` | Canais e ERP |
 
 ### Matriz rápida (diagnóstico)
 
@@ -69,13 +70,33 @@ Escolha um preset ou marque manualmente conforme as skills que o usuário vai in
 | `ads:reports:read` | `get_ads_performance`, `ask_ads_report_analyst` |
 | `ads:campaigns:write` | `create/update/delete_resources` |
 
-Keys antigas **não** ganham scopes novos automaticamente — revogue e recrie após upgrade de plano ou novas features.
+Scopes novos (por upgrade de plano ou novas features) não entram sozinhos: reconecte o cliente e aprove de novo na tela de consentimento.
 
-## Passo 3 — Configurar o cliente MCP
+## Passo 3 — Conectar o cliente MCP
 
-### Claude Desktop / Claude Code
+URL do servidor: `https://www.titanos.com.br/api/mcp`. Sem credencial na configuração.
 
-Arquivo de config MCP do cliente (caminho varia por OS):
+```bash
+# Claude Code
+claude mcp add --transport http titanos https://www.titanos.com.br/api/mcp
+
+# Codex
+codex mcp add titanos --url https://www.titanos.com.br/api/mcp
+codex mcp login titanos
+
+# Grok
+grok mcp add --transport http titanos https://www.titanos.com.br/api/mcp
+```
+
+**Cursor** (`~/.cursor/mcp.json`):
+
+```json
+{ "mcpServers": { "titanos": { "url": "https://www.titanos.com.br/api/mcp" } } }
+```
+
+**Claude (web/desktop):** abra Conectores nas configurações do Claude e adicione um conector personalizado com a URL acima.
+
+**Clientes sem suporte a HTTP/OAuth (stdio):** exige Node.js 18+ e `@titanos/mcp-agents` 1.44.0+. O login OAuth abre no navegador e o pacote guarda o token curto em `~/.titanos`:
 
 ```json
 {
@@ -83,26 +104,16 @@ Arquivo de config MCP do cliente (caminho varia por OS):
     "titanos": {
       "command": "npx",
       "args": ["-y", "@titanos/mcp-agents@1"],
-      "env": {
-        "TITANOS_API_KEY": "tnk_live_COLE_A_KEY_COMPLETA_AQUI",
-        "TITANOS_API_URL": "https://www.titanos.com.br"
-      }
+      "env": { "TITANOS_API_URL": "https://www.titanos.com.br" }
     }
   }
 }
 ```
 
 - Use `@1` para sempre resolver a versão estável mais recente da linha 1.x.
-- **Nunca** commite a key no git.
-- Key truncada → erro `INVALID_API_KEY`.
-
-### Hermes / OpenClaw
-
-Informe o caminho da pasta de skills **ou** cole o conteúdo de `SKILL.md`. Para MCP, use o mesmo bloco JSON acima no config de servidores do Hermes.
-
-### Cursor
-
-Adicione o servidor MCP nas configurações do projeto com o mesmo JSON (`npx` + env).
+- Para limitar o modo, acrescente `"TITANOS_MCP_PROFILE": "amazon-ads"` (ou outro) em `env`.
+- **Nunca** coloque chave, token ou senha na configuração nem no git.
+- Reinicie o cliente depois de alterar a configuração.
 
 ## Passo 4 — Validar conexão (sempre)
 
@@ -118,7 +129,7 @@ Ordem obrigatória na primeira sessão:
 ### `whoami` — o que checar
 
 - `scopes[]` contém o que a tarefa precisa
-- Plano ativo (Grow+)
+- Plano ativo (Grow+) e a organização autorizada
 - Conexões Amazon listadas (seller / ads)
 
 ### Guias embutidos (0 créditos)
@@ -133,11 +144,15 @@ Ordem obrigatória na primeira sessão:
 
 | Sintoma | Causa | Ação |
 |---------|-------|------|
-| `SCOPE_MISSING` | Key sem permissão | Recriar key com scope ou preset correto |
-| `INVALID_API_KEY` | Key cortada ou revogada | Nova key em Conta → Integrar com IA |
-| `AMAZON_CONNECTION_NOT_FOUND` | OAuth não conectado | Conectar em Conta → Integrações |
-| Tools não aparecem no cliente | Cliente sem reiniciar após config | Reiniciar Claude/Hermes |
-| Seller/Ads vazio | Conexão inativa ou perfil errado | Reautorizar OAuth |
+| 401 / erro de autorização | Login expirado ou não concluído | Refazer o login (`codex mcp login titanos`) e conferir o plano Grow+ |
+| `SCOPE_MISSING` | Scope não aprovado no consentimento | Reconectar e aprovar o scope necessário |
+| `AMAZON_CONNECTION_NOT_FOUND` | OAuth Amazon não conectado | Conectar em Conta → Integrações |
+| Navegador não abre | Navegador padrão ausente | Copiar a URL de autorização do terminal |
+| Tools não aparecem | Cliente não reiniciado ou scope/plano sem a função | Reiniciar; revisar scopes e plano |
+| `npx` não encontrado (stdio) | Node.js ausente | Instalar Node.js 18+ |
+| Seller/Ads vazio | Conexão inativa ou perfil errado | Reautorizar OAuth Amazon |
+
+Mais respostas: <https://www.titanos.com.br/ajuda>.
 
 ## Créditos (visão geral)
 
@@ -157,12 +172,12 @@ Resposta MCP inclui `credits_used` — reporte ao usuário após invokes pagos.
 | `amazon-mining-research` | Mineração Amazon |
 | `super-listing-power` | Super Listing Power |
 | `listing-create-publish` | Publicar listing |
-| `Amazon-Ads` | Amazon Ads |
+| `amazon-ads` | Amazon Ads |
 | … | Ver nota Maestri / índice completo |
 
 ## Checklist antes de declarar “MCP pronto”
 
-- [ ] API Key criada e colada **inteira** no `env`
+- [ ] Cliente conectado e login OAuth concluído (sem chave em config)
 - [ ] OAuth Seller e/ou Ads ativo (conforme uso)
 - [ ] `whoami` retorna scopes esperados
 - [ ] `get_server_guide` responde

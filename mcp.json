@@ -4,10 +4,12 @@
     "titanos": {
       "type": "stdio",
       "command": "npx",
-      "args": ["-y", "@titanos/mcp-agents@1"],
+      "args": [
+        "-y",
+        "@titanos/mcp-agents@1"
+      ],
       "env": {
-        "TITANOS_API_URL": "https://www.titanos.com.br",
-        "TITANOS_API_KEY": "${TITANOS_API_KEY}"
+        "TITANOS_API_URL": "https://www.titanos.com.br"
       }
     }
   }
