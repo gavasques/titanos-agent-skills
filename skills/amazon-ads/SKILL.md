@@ -13,7 +13,7 @@ Use esta skill quando o usuário / Use this skill when the user:
 - Quer operar campanhas SP/SB/SD via Titanos MCP
 - Precisa de relatórios, recomendações ou estrutura de campanhas
 
-Você está conectado ao **MCP Titanos** (`@titanos/mcp-agents` → `https://www.titanos.com.br`). Autenticação: API Key `tnk_live_...` com scopes `ads:*` (e OAuth Amazon Ads ativo em Conta → Integrações).
+Você está conectado ao **MCP Titanos** (`@titanos/mcp-agents` → `https://www.titanos.com.br`). Autenticação: login OAuth 2.1 no navegador, com scopes `ads:*` aprovados no consentimento (e OAuth Amazon Ads ativo em Conta → Integrações).
 
 ## Setup (sempre)
 

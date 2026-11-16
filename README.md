@@ -1,6 +1,6 @@
 # TITANOS agent skills
 
-[Site](https://www.titanos.com.br) · [Integrações / Integrations](https://www.titanos.com.br/conta/integracoes) · [MCP npm `@titanos/mcp-agents`](https://www.npmjs.com/package/@titanos/mcp-agents)
+[Site](https://www.titanos.com.br) · [Docs MCP](https://www.titanos.com.br/docs/mcp) · [Ajuda / Help](https://www.titanos.com.br/ajuda) · [Integrações / Integrations](https://www.titanos.com.br/conta/integracoes) · [MCP npm `@titanos/mcp-agents`](https://www.npmjs.com/package/@titanos/mcp-agents)
 
 ---
 
@@ -8,15 +8,15 @@
 
 ### O que é o TITANOS
 
-O [TITANOS](https://www.titanos.com.br) é uma plataforma brasileira de operação para vendedores em marketplaces (Amazon e outros canais). A conta, as conexões de loja e o painel ficam no site oficial — não neste repositório. Para usar as integrações com agentes, você precisa de uma conta TITANOS e de uma API key criada lá.
+O [TITANOS](https://www.titanos.com.br) é uma plataforma brasileira de operação para vendedores em marketplaces (Amazon e outros canais). A conta, as conexões de loja e o painel ficam no site oficial — não neste repositório. Para usar as integrações com agentes, você precisa de uma conta TITANOS (plano Grow+) e autorizar o cliente por login OAuth no navegador — não há chave para copiar.
 
 ### O que é deste repositório
 
-Este repositório é o **pacote público de skills oficiais de vendedor** que o TITANOS publica em [Conta → Integrações](https://www.titanos.com.br/conta/integracoes). Cada pasta em `skills/` contém um `SKILL.md`: receitas para agentes (Cursor, Claude Code e clientes compatíveis). Os IDs são os mesmos do catálogo do produto. **Não é o aplicativo TITANOS** nem o servidor MCP.
+Este repositório é o **pacote público de skills oficiais de vendedor** que o TITANOS publica em [Conta → Integrações](https://www.titanos.com.br/conta/integracoes). Cada pasta em `skills/` contém um `SKILL.md`: receitas para agentes (Cursor, Claude Code e clientes compatíveis). Os IDs são os mesmos do catálogo do produto. **Não é o aplicativo TITANOS** nem o servidor MCP (o servidor é `https://www.titanos.com.br/api/mcp`; guia: [titanos.com.br/docs/mcp](https://www.titanos.com.br/docs/mcp)).
 
 ### O que NÃO está aqui
 
-Não há chaves de API, credenciais de vendedor, IDs de Ads nem dados de contas reais. Crie a API key na conta TITANOS (**Conta → Configurações / MCP**) e use-a só no ambiente local (`TITANOS_API_KEY`). Nunca commite a key.
+Não há chaves de API, credenciais de vendedor, IDs de Ads nem dados de contas reais. A autenticação é OAuth 2.1 no navegador: nenhuma chave ou token entra neste repositório nem na configuração do cliente.
 
 ### Comece no site TITANOS
 
@@ -36,15 +36,15 @@ Não há chaves de API, credenciais de vendedor, IDs de Ads nem dados de contas 
 
 ### What TITANOS is
 
-[TITANOS](https://www.titanos.com.br) is a Brazilian seller operations platform for Amazon and other marketplaces. Your account, store connections, and dashboard live on the official site — not in this repository. To use agent integrations you need a TITANOS account and an API key created there.
+[TITANOS](https://www.titanos.com.br) is a Brazilian seller operations platform for Amazon and other marketplaces. Your account, store connections, and dashboard live on the official site — not in this repository. To use agent integrations you need a TITANOS account (Grow+ plan) and to authorize your client with an OAuth browser login — there is no key to copy.
 
 ### What this repo is
 
-This repository is the **public pack of official seller skills** published by TITANOS on [Account → Integrations](https://www.titanos.com.br/conta/integracoes). Each folder under `skills/` has a `SKILL.md`: recipes for agents (Cursor, Claude Code, and compatible clients). IDs match the product catalog. **This is not the TITANOS app** and not the MCP server.
+This repository is the **public pack of official seller skills** published by TITANOS on [Account → Integrations](https://www.titanos.com.br/conta/integracoes). Each folder under `skills/` has a `SKILL.md`: recipes for agents (Cursor, Claude Code, and compatible clients). IDs match the product catalog. **This is not the TITANOS app** and not the MCP server (the server is `https://www.titanos.com.br/api/mcp`; guide: [titanos.com.br/docs/mcp](https://www.titanos.com.br/docs/mcp)).
 
 ### What is NOT here
 
-There are no API keys, seller credentials, Ads IDs, or live account data. Create the API key in your TITANOS account (**Account → Settings / MCP**) and use it only in the local environment (`TITANOS_API_KEY`). Never commit the key.
+There are no API keys, seller credentials, Ads IDs, or live account data. Authentication is OAuth 2.1 in the browser: no key or token belongs in this repository or in the client configuration.
 
 ### Start on the TITANOS site
 
@@ -108,7 +108,14 @@ claude --plugin-dir ./titanos-agent-skills
 
 As skills aparecem com namespace (`/titanos:amazon-ads`, `/titanos:super-listing-power`, …). / Skills are namespaced (`/titanos:amazon-ads`, `/titanos:super-listing-power`, …).
 
-**MCP + API key** — o MCP sobe com `npx @titanos/mcp-agents@1`. Defina `TITANOS_API_KEY` no ambiente (não commitar). / Start MCP with `npx @titanos/mcp-agents@1`. Set `TITANOS_API_KEY` in the environment (do not commit it).
+**MCP + OAuth** — conecte o cliente ao servidor HTTP, sem chave / connect your client to the HTTP server, no key:
+
+```bash
+claude mcp add --transport http titanos https://www.titanos.com.br/api/mcp   # Claude Code
+codex mcp add titanos --url https://www.titanos.com.br/api/mcp && codex mcp login titanos   # Codex
+```
+
+O login abre no navegador. Alternativa stdio / stdio alternative: `npx -y @titanos/mcp-agents@1` (>= 1.44.0, OAuth). Guia completo e outros clientes / full guide and other clients: <https://www.titanos.com.br/docs/mcp> · Ajuda / Help: <https://www.titanos.com.br/ajuda>
 
 **Comece por / Start here:** `skills/titanos-mcp-setup`
 

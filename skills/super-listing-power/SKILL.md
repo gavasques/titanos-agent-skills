@@ -123,7 +123,7 @@ Estados até `completed` ou `failed`:
 - `completed` — `data` com texto, URLs de imagens geradas, estrutura A+
 - `failed` — erro; créditos podem ter refund conforme política Titanos
 
-**Limites:** concurrency MCP — máx 2 jobs `processando` por API key; não dispare invokes paralelos excessivos.
+**Limites:** concurrency MCP — máx 2 jobs `processando` por conexão autorizada; não dispare invokes paralelos excessivos.
 
 ### 4. Entregar ao usuário
 

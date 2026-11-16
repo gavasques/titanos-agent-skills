@@ -1,7 +1,7 @@
 .DS_Store
 *.zip
 
-# Local secrets / credentials (never commit TITANOS_API_KEY)
+# Local secrets / credentials (never commit tokens)
 .env
 .env.*
 !.env.example
