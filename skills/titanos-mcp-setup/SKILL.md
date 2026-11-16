@@ -94,7 +94,7 @@ grok mcp add --transport http titanos https://www.titanos.com.br/api/mcp
 { "mcpServers": { "titanos": { "url": "https://www.titanos.com.br/api/mcp" } } }
 ```
 
-**Claude (web/desktop):** Configurações → Conectores → conector personalizado com a URL acima.
+**Claude (web/desktop):** abra Conectores nas configurações do Claude e adicione um conector personalizado com a URL acima.
 
 **Clientes sem suporte a HTTP/OAuth (stdio):** exige Node.js 18+ e `@titanos/mcp-agents` 1.44.0+. O login OAuth abre no navegador e o pacote guarda o token curto em `~/.titanos`:
 
